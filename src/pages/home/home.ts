@@ -20,7 +20,8 @@ export class HomePage {
   logPage: any
   loggedIn: any;
 
-  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private userService: UserServiceProvider) {
+  constructor(public navCtrl: NavController, private afAuth: AngularFireAuth,
+              private userService: UserServiceProvider) {
     this.logPage = 'LoginPage';
 
     this.afAuth.auth.onAuthStateChanged( user => {
